@@ -1,0 +1,14 @@
+RewriteEngine ON
+
+Options -Indexes
+
+# Condition to know if the file exist : 
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Delete the .php extension
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Delete the .html extension
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+DirectoryIndex famille.html
