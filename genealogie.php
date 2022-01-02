@@ -311,3 +311,10 @@ if (isset($_POST['trier'])) {
 </body>
 
 </html>
+<?php
+
+  // FERMER LA CONNEXION
+  mysqli_close($lien);
+  mysqli_free_result($resultat);
+
+?>
